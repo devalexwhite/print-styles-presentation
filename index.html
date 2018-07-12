@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Web Development for Printers</title>
+    <meta charset="utf-8">
+    <style>
+      @import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+      body { font-family: 'Open Sans'; }
+      h1, h2, h3 {
+        font-weight: normal;
+        margin: 0 0 0.5rem 0;
+        padding: 0;
+      }
+      h1 {
+        font-size: 38px !important;
+      }
+      h2 {
+        font-size: 28px !important;
+      }
+      h3 {
+        font-size: 20px !important;
+      }
+
+      .no-margin-padding {
+        padding: 0;
+        margin: 0;
+      }
+      img {
+        max-width: 100%;
+        display: block;
+      }
+      .img-small {
+        width: 20%;
+      }
+      .img-medium {
+        width: 60%;
+        margin: 0 auto;
+      }
+      .img-large {
+        height: 100%;
+      }
+      .img-center {
+        margin: 0 auto;
+      }
+      .half-width {
+        width: 50%;
+      }
+      .three-fourths-width {
+        width: 75%;
+      }
+      .float-left {
+        float: left;
+      }
+      .real-center {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+      }
+      .header {
+        position: relative;
+        background-color: blueviolet;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 10px 50px;
+        margin-bottom: 20px;
+      }
+      .header > *:last-child {
+        margin-bottom: 0;
+      }
+      .content {
+        padding: 0 50px;
+      }
+      code {
+        background-color: black;
+        padding: 2px;
+        color: white;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+class: center, middle
+
+# Web Development for Printers
+### Alex White - Cardinal Solutions
+
+
+---
+
+class: no-margin-padding 
+
+.header[
+# Introduction
+## About Alex White (me)
+]
+
+.content[
+# 👋 Hi!
+
+- UX Developer at Cardinal Solutions
+- Ohio University graduate
+- Dad of two crazy puppies
+
+.img-medium.img-center[
+![puppers](./images/puppers.jpg)
+]
+]
+
+
+---
+
+class: no-margin-padding 
+
+.header[
+# Introduction
+## Why should you care about print?
+]
+
+.content[
+.half-width.float-left[
+People still print web pages!
+- Recipes
+- Reports
+- Data tables
+- Funny dog pictures
+
+Without special consideration, your pages might not look so great when printed.
+]
+.half-width.float-left[
+![bad print](./images/bad_print.png)
+]
+]
+
+---
+
+class: center middle
+
+## When done right, web pages can print beautifully...
+
+---
+
+class: center middle
+
+.img-medium[
+![not pdf view](./images/smartlink_screen.png)
+]
+
+---
+
+class: center middle
+
+.img-medium[
+![pdf export](./images/smartlink_print.png)
+]
+
+
+---
+
+class: center middle
+
+.img-large[
+![not pdf view](./images/wikipedia_screen.png)
+]
+
+---
+
+class: center middle
+
+.img-medium[
+![pdf export](./images/wikipedia_print.png)
+]
+
+
+---
+
+class: center middle
+
+.img-large[
+![not pdf view](./images/docs_screen.png)
+]
+
+---
+
+class: center middle
+
+.img-medium[
+![pdf export](./images/docs_print.png)
+]
+
+---
+
+class: center, middle
+
+# So how do you format your page for print?
+
+---
+
+.real-center[
+# 🎉Print Stylesheets (CSS) 🎉
+![anchorman](https://media.giphy.com/media/tLQfm7dmGqxfa/giphy.gif)
+]
+
+---
+
+class: no-margin-padding 
+
+.header[
+# Print stylesheets
+## Getting started
+]
+
+.content[
+.three-fourths-width[
+Print CSS allows you to specify specific CSS rules (or a separate stylesheet) that is used only when the page is printed.
+```css
+    @media print {
+      ...
+    }
+```
+
+```html
+  <link media="print" href="print.css" />
+```
+]
+]
+
+---
+
+class: no-margin-padding
+
+.header[
+# Print stylesheets
+## Formatting the page
+]
+
+.content[
+Print CSS lets you specify the page format and margins.
+```css
+    @page {
+      margin: 0.4in 0.5in;
+      size: letter landscape;
+    }
+```
+_Compatibility warning: Size only works in Chrome, margin does not work in IE11_
+
+[🏁 CodePen Checkpoint](https://codepen.io/alexwhitedev/pen/MBYZrB)
+]
+
+---
+
+class: no-margin-padding
+
+.header[
+# Print stylesheets
+## Hiding/showing content
+]
+
+.content[
+Using the print and screen media queries, you can hide, show, or modify elements when printing.
+```css
+@media print {
+  .header {
+    display: none;
+  }
+}
+
+@media screen {
+  .print-header {
+    display: none;
+  }
+}
+```
+]
+
+---
+
+class: no-margin-padding
+
+.header[
+# Print stylesheets
+## Hiding/showing content
+]
+
+.content[
+You can create helper classes to easily hide/show elements based on print/screen.
+```css
+@media print {
+  .hide-print {
+    display: none;
+  }
+}
+```
+```html
+  <header class="hide-print"></header>
+```
+[🏁 CodePen Checkpoint](https://codepen.io/alexwhitedev/pen/XBJogy)
+]
+
+---
+
+class: no-margin-padding
+
+.header[
+# Print stylesheets
+## Controlling page breaks
+]
+
+.content[
+You can use `page-break-before` and `page-break-after` to start a new page before/after an element.
+```css
+  section {
+    page-break-before: always;
+  }
+```
+
+`page-break-inside` can be used to avoid breaking a page in the middle of an element (if possible).
+```css
+  table {
+    page-break-inside: avoid;
+  }
+```
+
+[🏁 CodePen Checkpoint](https://codepen.io/alexwhitedev/pen/WKbPPB)
+]
+
+---
+
+class: no-margin-padding
+
+.header[
+# Print stylesheets
+## Repeating content
+]
+
+.content[
+.half-width.float-left[
+Did you know tables are cool again? Because they totally are!
+
+Tables are the best cross-browser way to repeat headers and footers when printing. `thead` and `tfoot` are always repeated when spanning multiple pages.
+
+[🏁 CodePen Checkpoint](https://codepen.io/alexwhitedev/pen/QBwoMj)
+]
+.half-width.float-left[
+```html
+  <table>
+    <thead>
+      <tr>
+        <th>
+          <header>Finance Reports</header>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          Report stuff
+        </td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <th>
+          <footer>Copyright  FakeReports.com</footer>
+        </th>
+      </tr>
+    </tfoot>
+  </table>
+```
+]
+]
+---
+
+.real-center[
+## So what are the downsides?
+![office space](https://media.giphy.com/media/E7TjVOF3MoRFu/giphy.gif)
+]
+
+---
+
+class: no-margin-padding 
+
+.header[
+# Pitfalls
+## "Standards"
+]
+
+.content.half-width[
+Support for Print CSS is especially fragmented.
+- `position: fixed` is supposed to repeat content on every page, only works on Firefox
+- `counter-increment: page;` should give you access to the page number, doesn't work on Chrome
+- `@page { size: letter portrait }` only works on Chrome
+- StackOverflow loves to refer to the paged media module specs that have now been removed from all browsers
+- Setting the title of the page (via html `<title></title>`) does not set the exported Print->PDF document in all browsers
+- Forcing the printing of background colors does not work on IE or Edge
+]
+
+---
+
+.real-center[
+.img-medium[
+![paged media support](./images/pagedmediasupport.png)
+]
+]
+
+---
+
+.real-center[
+.img-medium[
+![paged media support](./images/pagebreaksupport.png)
+]
+]
+
+---
+
+.real-center[
+.img-medium[
+![paged media support](./images/pagedmediaattrashed.png)
+]
+]
+
+---
+
+.real-center[
+.img-medium[
+![color adjust support](./images/coloradjustsadness.png)
+]
+]
+
+---
+
+class: no-margin-padding 
+
+.header[
+# Pitfalls
+## Print dialog
+]
+
+.content[
+.half-width.float-left[
+The user can always override print settings, which can lead to issues with how your content is displayed.
+- Custom print size or margins could destroy how your layout looks
+- By default, browsers automatically add headers/footers when printing. This could overlap with your content.
+ - You can use tricks such as negative margins to hide browser headers/footers, but this isn't cross-browser friendly.
+- The print dialog looks different across browsers/operating systems. This can lead to confusion among your users.
+]
+.half-width.float-left[
+  .img-medium[
+    ![ie print dialog](./images/printdialogie.png)
+  ]
+  .img-medium[
+    ![chrome print dialog](./images/printdialogchrome.png)
+  ]
+  ]
+]
+
+---
+
+class: no-margin-padding 
+
+.header[
+# Pitfalls
+## Colors
+]
+
+.content.half-width[
+When printing, background colors & images are not shown (unless the user specifies otherwise or the browser supports color-adjust). 
+
+This can lead to issues such as striped tables no longer being striped, or awkwardness in UI elements.
+
+Thankfully, this can typically be resolved using borders, which __are__ printed in color.
+
+[🏁 CodePen Checkpoint](https://codepen.io/alexwhitedev/pen/GBgLZp)
+]
+
+---
+
+class: no-margin-padding 
+
+.header[
+# Summary
+## Think of the printer
+]
+
+.content.half-width[
+Adding proper print styles to your site can go a long way in improving the experience for printer happy users.
+
+Although there's a lack of love from browsers for print styles in terms of capabilities and standards, 
+most pages will be vastly improved by simply hiding unnecessary elements on print.
+]
+
+---
+
+.real-center[
+# Thanks for listening!
+### [@AlexWhiteDev](https://twitter.com/AlexWhiteDev)
+![spongebob](https://media2.giphy.com/media/6tHy8UAbv3zgs/giphy.gif)
+]
+
+---
+
+    </textarea>
+    <script src="https://remarkjs.com/downloads/remark-latest.min.js">
+    </script>
+    <script>
+      var slideshow = remark.create();
+    </script>
+  </body>
+</html>
