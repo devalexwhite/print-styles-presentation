@@ -1,0 +1,51 @@
+<html>
+
+<body>
+  <style>
+    header {
+      width: 100%;
+      text-align: center;
+      padding: 30px 0;
+      background-color: red;
+      font-size: 32px;
+    }
+
+    img {
+      float: left;
+    }
+
+    .thanks {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    @media print {
+      header {
+        text-align: left;
+        background-color: transparent;
+        font-size: 42px;
+      }
+
+      .hide-print {
+        display: none;
+      }
+    }
+
+    @media screen {
+      .hide-screen {
+        display: none;
+      }
+    }
+  </style>
+  <script>
+  </script>
+  <button onClick="window.print()" class="hide-print">Print</button>
+  <header class="hide-print">
+    I'm a header
+  </header>
+  <img src="http://placehold.it/600x200" class="hide-print" />
+  <p>Here is my page content that goes here and is really cool and really good so you should pay attention to it.</p>
+  <div class="hide-screen thanks">Thank you for printing our page!</div>
+</body>
+
+</html>

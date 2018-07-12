@@ -1,0 +1,146 @@
+<html>
+
+<body>
+  <style>
+    @media screen {
+      .hide-screen {
+        display: none;
+      }
+    }
+
+    @media print {
+      .hide-print {
+        display: none;
+      }
+    }
+
+    .wrapper {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .download-report {
+      background-color: lightGray;
+      padding: 20px;
+      border-radius: 4px;
+      width: 600px;
+      height: 200px;
+      text-align: center;
+    }
+
+    button {
+      padding: 8px 10px;
+    }
+
+    header {
+      text-align: center;
+      font-size: 22px;
+      border-bottom: 1px solid gray;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+
+    section:not(:first-of-type) {
+      page-break-before: always;
+    }
+
+    h1 {
+      font-size: 32px;
+    }
+
+    p {
+      line-height: 1.5rem;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 12px;
+      border-top: 1px solid black;
+      padding: 10px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+  <script>
+  </script>
+  <div class="wrapper">
+    <section class="download-report hide-print">
+      <h1>Download Financial Report</h1>
+      <p>The company's yearly financial report is available to download.</p>
+      <button onClick="window.print()">Access Report</button>
+    </section>
+  </div>
+  <table class="hide-screen">
+    <thead>
+      <tr>
+        <th>
+          <header>
+            Finance Report 2018
+          </header>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <section>
+            <h1>Financial Overview</h1>
+            <p>
+              The University ended fiscal 2014 with an operating surplus of $2.7 million (which includes a one-time benefits adjustment)
+              compared to an operating deficit of $33.7 million in fiscal 2013. The University’s net assets increased by
+              $4.6 billion to $43.2 billion at June 30, 2014, driven mainly by positive endowment returns. operating revenue
+              Total operating revenue increased 5% to $4.4 billion. An increase in gifts for current use as a result of The
+              Harvard Campaign and an increase in the annual distribution from the endowment were the largest drivers. The
+              University continues to focus on diversifying its sources of revenue which is reflected in the growth in income
+              from continuing and executive education programs, corporate sponsors and publishing and royalty revenue. Current
+              use gifts increased by 24% to $419 million in fiscal 2014, and total receipts from giving, including gifts
+              designated as endowment, increased 46% to $1.2 billion (see Note 16 of the audited financial statements). The
+              significant increase in giving is a result of the generosity of our alumni and supporters in their contributions
+              to the University’s first capital campaign in over a decade. We are extremely grateful for this support. In
+              fiscal 2014, the endowment distribution increased 3% to $1.5 billion. Growth in the endowment distribution
+              was a result of the annual Corporation-approved increase, as well as the impact of new gifts. In the aggregate,
+              Harvard’s endowment payout rate (i.e., the dollars withdrawn annually for operations and for one-time or time-limited
+              strategic purposes, as a percentage of the endowment’s prior year-end market value) was 5.6% compared to the
+              University’s targeted payout rate range of 5.0-5.5% and the 5.5% payout rate in fiscal 2013. Revenue from federal
+              and non-federal sponsored funding declined by $13 million or 2% to $819 million in fiscal 2014. Federal funding,
+              which accounted for approximately 75% of the total sponsored revenue in fiscal 2014, declined 5% to $611 million.
+            </p>
+          </section>
+          <section>
+            <h1>Operating Expenses</h1>
+            <p>
+              Operating expenses Total operating expenses increased by 4% to $4.4 billion. Compensation expense (i.e., salaries, wages
+              and benefits), which represents approximately half of the University’s total operating expense, increased 5%
+              from $2.1 billion in fiscal 2013 to $2.2 billion in fiscal 2014. Salaries and wages increased by 6%, or $87
+              million, to $1.6 billion in fiscal 2014 due to the University’s budgeted merit programs as well as additional
+              faculty and staff to support strategic areas of focus such as online learning, information technology investments,
+              and continuing and executive education programs. Employee benefits expense (excluding a $46 million one-time
+              adjustment for a change in valuation methodology for the defined benefit plan) decreased 5%, or $23 million
+              to $484 million. The decrease was mainly driven by a reduction in annual expense for both the University’s
+              defined benefit pension and postretirement health plans due to favorable changes in actuarial assumptions that
+              were set when establishing the obligation on the University’s Balance Sheet at the end of fiscal year 2013.
+              In addition, plan changes slowed the rate of growth in postretirement health
+            </p>
+          </section>
+      </tr>
+      </td>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td>
+          <footer>
+            Fake Finance Report - © 2018 - Enternity
+          </footer>
+        </td>
+      </tr>
+    </tfoot>
+</body>
+
+</html>

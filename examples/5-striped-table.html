@@ -1,0 +1,78 @@
+<html>
+
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+</head>
+
+<body>
+  <style>
+    table.stripe-fix tr>td {
+      position: relative;
+      z-index: 1;
+    }
+
+    table.stripe-fix tr:nth-child(odd)>td:after {
+      content: '';
+      width: 100%;
+      border-bottom: 47px solid red;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      z-index: -1;
+    }
+  </style>
+  <script>
+    function printNoBorder() {
+      document.getElementById("table").classList = "table table-striped";
+      window.print();
+    }
+
+    function printBorder() {
+      document.getElementById("table").classList = "table table-striped stripe-fix";
+      window.print();
+    }
+  </script>
+  <button onClick="printNoBorder()">Without border fix</button>
+  <button onClick="printBorder()">With border fix</button>
+  <table class="table table-striped" id="table">
+    <thead>
+      <tr>
+        <th>DATA</th>
+        <th>DATA</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>DATA</td>
+        <td>DATA</td>
+      </tr>
+      <tr>
+        <td>DATA</td>
+        <td>DATA</td>
+      </tr>
+      <tr>
+        <td>DATA</td>
+        <td>DATA</td>
+      </tr>
+      <tr>
+        <td>DATA</td>
+        <td>DATA</td>
+      </tr>
+      <tr>
+        <td>DATA</td>
+        <td>DATA</td>
+      </tr>
+      <tr>
+        <td>DATA</td>
+        <td>DATA</td>
+      </tr>
+      <tr>
+        <td>DATA</td>
+        <td>DATA</td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+
+</html>

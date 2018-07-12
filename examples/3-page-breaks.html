@@ -1,0 +1,328 @@
+<html>
+
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+</head>
+
+<body>
+  <style>
+    @media print {
+      h1:not(:first-of-type) {
+        page-break-before: always;
+      }
+    }
+
+    table {
+      page-break-inside: auto;
+    }
+
+    table.avoid-page-break {
+      page-break-inside: avoid;
+    }
+  </style>
+  <script>
+    function printWithoutBreaks() {
+      const tags = [...document.getElementsByTagName("table")]
+      tags.forEach(e => {
+        e.className = 'table';
+      });
+      window.print();
+    }
+
+    function printWithBreaks() {
+      const tags = [...document.getElementsByTagName("table")]
+      tags.forEach(e => {
+        e.className = 'table avoid-page-break';
+      });
+      window.print();
+    }
+  </script>
+  <button onClick="printWithoutBreaks()">Print without breaks</button>
+  <button onClick="printWithBreaks()">Print with breaks</button>
+  <h1>My page</h1>
+  <h1>My second page</h1>
+  <br/>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>DATA COLUMN</th>
+        <th>DATA COLUMN</th>
+        <th>DATA COLUMN</th>
+      </tr>
+      <tbody>
+        <tr>
+          <td>DATA</td>
+          <td>DATA</td>
+          <td>DATA</td>
+        </tr>
+        <tr>
+          <td>DATA</td>
+          <td>DATA</td>
+          <td>DATA</td>
+        </tr>
+        <tr>
+          <td>DATA</td>
+          <td>DATA</td>
+          <td>DATA</td>
+        </tr>
+        <tr>
+          <td>DATA</td>
+          <td>DATA</td>
+          <td>DATA</td>
+        </tr>
+        <tr>
+          <td>DATA</td>
+          <td>DATA</td>
+          <td>DATA</td>
+        </tr>
+        <tr>
+          <td>DATA</td>
+          <td>DATA</td>
+          <td>DATA</td>
+        </tr>
+        <tr>
+          <td>DATA</td>
+          <td>DATA</td>
+          <td>DATA</td>
+        </tr>
+        <tr>
+          <td>DATA</td>
+          <td>DATA</td>
+          <td>DATA</td>
+        </tr>
+        <tr>
+          <td>DATA</td>
+          <td>DATA</td>
+          <td>DATA</td>
+        </tr>
+        <tr>
+          <td>DATA</td>
+          <td>DATA</td>
+          <td>DATA</td>
+        </tr>
+        <tr>
+          <td>DATA</td>
+          <td>DATA</td>
+          <td>DATA</td>
+        </tr>
+        <tr>
+          <td>DATA</td>
+          <td>DATA</td>
+          <td>DATA</td>
+        </tr>
+      </tbody>
+  </table>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>DATA COLUMN</th>
+        <th>DATA COLUMN</th>
+        <th>DATA COLUMN</th>
+      </tr>
+      <tbody>
+        <tr>
+          <td>DATA</td>
+          <td>DATA</td>
+          <td>DATA</td>
+        </tr>
+        <tr>
+          <td>DATA</td>
+          <td>DATA</td>
+          <td>DATA</td>
+        </tr>
+        <tr>
+          <td>DATA</td>
+          <td>DATA</td>
+          <td>DATA</td>
+        </tr>
+        <tr>
+          <td>DATA</td>
+          <td>DATA</td>
+          <td>DATA</td>
+        </tr>
+        <tr>
+          <td>DATA</td>
+          <td>DATA</td>
+          <td>DATA</td>
+        </tr>
+        <tr>
+          <td>DATA</td>
+          <td>DATA</td>
+          <td>DATA</td>
+        </tr>
+        <tr>
+          <td>DATA</td>
+          <td>DATA</td>
+          <td>DATA</td>
+        </tr>
+        <tr>
+          <td>DATA</td>
+          <td>DATA</td>
+          <td>DATA</td>
+        </tr>
+        <tr>
+          <td>DATA</td>
+          <td>DATA</td>
+          <td>DATA</td>
+        </tr>
+        <tr>
+          <td>DATA</td>
+          <td>DATA</td>
+          <td>DATA</td>
+        </tr>
+        <tr>
+          <td>DATA</td>
+          <td>DATA</td>
+          <td>DATA</td>
+        </tr>
+        <tr>
+          <td>DATA</td>
+          <td>DATA</td>
+          <td>DATA</td>
+        </tr>
+      </tbody>
+  </table>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>DATA COLUMN</th>
+        <th>DATA COLUMN</th>
+        <th>DATA COLUMN</th>
+      </tr>
+      <tbody>
+        <tr>
+          <td>DATA</td>
+          <td>DATA</td>
+          <td>DATA</td>
+        </tr>
+        <tr>
+          <td>DATA</td>
+          <td>DATA</td>
+          <td>DATA</td>
+        </tr>
+        <tr>
+          <td>DATA</td>
+          <td>DATA</td>
+          <td>DATA</td>
+        </tr>
+        <tr>
+          <td>DATA</td>
+          <td>DATA</td>
+          <td>DATA</td>
+        </tr>
+        <tr>
+          <td>DATA</td>
+          <td>DATA</td>
+          <td>DATA</td>
+        </tr>
+        <tr>
+          <td>DATA</td>
+          <td>DATA</td>
+          <td>DATA</td>
+        </tr>
+        <tr>
+          <td>DATA</td>
+          <td>DATA</td>
+          <td>DATA</td>
+        </tr>
+        <tr>
+          <td>DATA</td>
+          <td>DATA</td>
+          <td>DATA</td>
+        </tr>
+        <tr>
+          <td>DATA</td>
+          <td>DATA</td>
+          <td>DATA</td>
+        </tr>
+        <tr>
+          <td>DATA</td>
+          <td>DATA</td>
+          <td>DATA</td>
+        </tr>
+        <tr>
+          <td>DATA</td>
+          <td>DATA</td>
+          <td>DATA</td>
+        </tr>
+        <tr>
+          <td>DATA</td>
+          <td>DATA</td>
+          <td>DATA</td>
+        </tr>
+      </tbody>
+  </table>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>DATA COLUMN</th>
+        <th>DATA COLUMN</th>
+        <th>DATA COLUMN</th>
+      </tr>
+      <tbody>
+        <tr>
+          <td>DATA</td>
+          <td>DATA</td>
+          <td>DATA</td>
+        </tr>
+        <tr>
+          <td>DATA</td>
+          <td>DATA</td>
+          <td>DATA</td>
+        </tr>
+        <tr>
+          <td>DATA</td>
+          <td>DATA</td>
+          <td>DATA</td>
+        </tr>
+        <tr>
+          <td>DATA</td>
+          <td>DATA</td>
+          <td>DATA</td>
+        </tr>
+        <tr>
+          <td>DATA</td>
+          <td>DATA</td>
+          <td>DATA</td>
+        </tr>
+        <tr>
+          <td>DATA</td>
+          <td>DATA</td>
+          <td>DATA</td>
+        </tr>
+        <tr>
+          <td>DATA</td>
+          <td>DATA</td>
+          <td>DATA</td>
+        </tr>
+        <tr>
+          <td>DATA</td>
+          <td>DATA</td>
+          <td>DATA</td>
+        </tr>
+        <tr>
+          <td>DATA</td>
+          <td>DATA</td>
+          <td>DATA</td>
+        </tr>
+        <tr>
+          <td>DATA</td>
+          <td>DATA</td>
+          <td>DATA</td>
+        </tr>
+        <tr>
+          <td>DATA</td>
+          <td>DATA</td>
+          <td>DATA</td>
+        </tr>
+        <tr>
+          <td>DATA</td>
+          <td>DATA</td>
+          <td>DATA</td>
+        </tr>
+      </tbody>
+  </table>
+</body>
+
+</html>
