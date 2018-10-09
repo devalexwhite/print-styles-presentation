@@ -2,7 +2,7 @@
 ## A presentation covering the basics of print stylesheets
 
 ### Slides
-You can see the presentation by [clicking here](https://toaster99.github.io/print-styles-presentation) or opening `index.html`
+You can see the presentation by [clicking here](https://devalexwhite.github.io/print-styles-presentation) or opening `index.html`
 in this repository.
 
 ### Examples
